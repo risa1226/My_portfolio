@@ -1,0 +1,169 @@
+html {
+  font-size: 62.5%; }
+
+body {
+  background: #ffffff;
+  color: #555050; }
+
+header .menu {
+  padding: 30px 0; }
+  header .menu ul {
+    text-align: right;
+    padding-right: 20px; }
+    header .menu ul li {
+      list-style: none;
+      display: inline-block;
+      padding-right: 20px; }
+      header .menu ul li a {
+        text-decoration: none;
+        font-size: 28px;
+        font-size: 2.8rem;
+        color: #555050; }
+        header .menu ul li a span {
+          font-size: 38px;
+          font-size: 3.8rem; }
+@media (max-width: 550px) {
+  header .menu {
+    padding: 10px 0; }
+    header .menu ul li {
+      padding-right: 10px; }
+      header .menu ul li a {
+        font-size: 18px;
+        font-size: 1.8rem; }
+        header .menu ul li a span {
+          font-size: 28px;
+          font-size: 2.8rem; } }
+
+.cover {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+<<<<<<< HEAD
+  background-image: url("../image/image_top.png"); }
+=======
+  background-image: url("../image/TOP_cover0807.png"); }
+>>>>>>> commit0807
+  @media (max-width: 550px) {
+    .cover {
+      height: 250px; } }
+
+#About {
+  padding: 100px 0;
+  text-align: center; }
+  #About h1 {
+    font-size: 38px;
+    font-size: 3.8rem;
+    font-weight: lighter; }
+  #About .profile {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center; }
+    #About .profile .content {
+      padding-left: 20px;
+      text-align: left; }
+      #About .profile .content p {
+        font-size: 16px;
+        font-size: 1.6rem;
+        margin: 10px 0; }
+        #About .profile .content p img {
+          padding: 0 10px; }
+    @media (max-width: 550px) {
+      #About .profile {
+        display: block; }
+        #About .profile .content {
+          padding-top: 20px; } }
+
+#Skills {
+  padding: 100px 0;
+  text-align: center; }
+  #Skills h1 {
+    font-size: 38px;
+    font-size: 3.8rem;
+    font-weight: lighter; }
+  #Skills .skill {
+    display: flex;
+    justify-content: center; }
+    #Skills .skill .web, #Skills .skill .draw, #Skills .skill .communication {
+      width: 300px;
+      padding: 50px 20px 0 20px; }
+      #Skills .skill .web h2, #Skills .skill .draw h2, #Skills .skill .communication h2 {
+        font-size: 22px;
+        font-size: 2.2rem;
+        font-weight: lighter; }
+      #Skills .skill .web img, #Skills .skill .draw img, #Skills .skill .communication img {
+        padding: 20px 0; }
+      #Skills .skill .web p, #Skills .skill .draw p, #Skills .skill .communication p {
+        font-size: 16px;
+        font-size: 1.6rem;
+        line-height: 1.8; }
+    @media (max-width: 550px) {
+      #Skills .skill {
+        display: block; }
+        #Skills .skill .web, #Skills .skill .draw, #Skills .skill .communication {
+          width: auto; } }
+
+#Works {
+  padding: 100px 0 200px 0;
+  text-align: center; }
+  #Works h2 {
+    font-size: 38px;
+    font-size: 3.8rem;
+    font-weight: lighter; }
+  #Works .works_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px; }
+    #Works .works_list .works01, #Works .works_list .works02, #Works .works_list .works03, #Works .works_list .works04 {
+      padding: 10px 20px 30px 20px; }
+
+footer {
+  background-color: #dcdcdc; }
+  footer p {
+    font-size: 14px;
+    font-size: 1.4rem;
+    text-align: center; }
+
+.cover01 {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../image/ec_work.png"); }
+
+.cover02 {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../image/portfolio_corporate.png"); }
+
+.cover03 {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../image/suzuki_work.png"); }
+
+.cover04 {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../image/board_cherry.png"); }
+
+.sentense {
+  padding: 50px 0;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1.6rem; }
+  .sentense h1 {
+    font-weight: lighter;
+    font-size: 24px;
+    font-size: 2.4rem;
+    padding-bottom: 30px; }
+  .sentense a {
+    color: #555050; }
+
+/*# sourceMappingURL=style.css.map */

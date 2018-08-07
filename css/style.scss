@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+html {
+  font-size: 62.5%;
+}
+
+@mixin fontsize($size: 24, $base: 10) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+
+$ja_font : "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+$gray1 : #555050;
+$gray2 : #dcdcdc;
+$white : #ffffff;
+
+body{
+    background: $white;
+    color: $gray1;
+    
+    
+}
+
+header{
+    .menu{
+    padding: 30px 0;
+    
+    
+     ul{
+        text-align: right;
+        padding-right: 20px;
+        
+        li{
+            list-style:none;
+            display:inline-block;
+            padding-right: 20px;
+            
+            a{
+                text-decoration:none;
+                @include fontsize(28);
+                color: $gray1;
+                
+                span{
+                    @include fontsize(38);
+                }
+            }
+        }
+     }
+    }
+    
+    @media (max-width: 550px) {
+        .menu{
+            padding: 10px 0;
+        
+         ul{
+          li{
+              padding-right: 10px;
+             a{
+               @include fontsize(18);
+            
+              span{
+                @include fontsize(28);
+              }
+             }
+          }
+         }
+        }
+    }
+    
+    
+}
+
+
+.cover{
+    height: 500px;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+<<<<<<< HEAD
+    background-image: url("../image/image_top.png");
+=======
+    background-image: url("../image/TOP_cover0807.png");
+>>>>>>> commit0807
+    
+    @media (max-width: 550px){
+        height: 250px;
+    }
+    
+}
+
+#About{
+    padding: 100px 0;
+    text-align:center;
+    
+    h1{
+        @include fontsize(38);
+        font-weight:lighter;
+    }
+    
+    .profile{
+        padding-top: 30px;
+        display:flex;
+        justify-content:center;
+        
+        .content{
+            padding-left: 20px;
+            text-align: left;
+            
+            p{
+                @include fontsize(16);
+                margin: 10px 0;
+                
+                img{
+                    padding: 0 10px;
+                }
+            }
+        }
+        
+    @media (max-width: 550px){
+        display: block;
+        
+        .content{
+            padding-top: 20px;
+        }
+    }
+    }
+}
+
+#Skills{
+    padding: 100px 0;
+    text-align:center;
+    
+    h1{
+        @include fontsize(38);
+        font-weight:lighter;
+    }
+    
+    .skill{
+        display:flex;
+        justify-content:center;
+        
+        .web, .draw, .communication{
+            width: 300px;
+            padding: 50px 20px 0 20px;
+            
+            h2{
+                @include fontsize(22);
+                font-weight:lighter;
+            }
+            
+            img{
+                padding: 20px 0;
+            }
+            
+            p{
+                @include fontsize(16);
+                line-height: 1.8;
+            }
+        }
+        
+        @media (max-width: 550px){
+            display: block;
+            
+            .web, .draw, .communication{
+                width: auto;
+            }
+        }
+    }
+}
+
+#Works{
+    padding: 100px 0 200px 0;
+    text-align: center;
+    
+    h2{
+      @include fontsize(38);
+      font-weight:lighter;
+    }
+    
+    .works_list{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        padding-top: 50px;
+        
+        .works01, .works02, .works03, .works04{
+            padding: 10px 20px 30px 20px;
+        }
+    }
+}
+
+footer{
+    background-color:$gray2;
+    
+    p{
+        @include fontsize(14);
+        text-align:center;
+    }
+}
+
+.cover01{
+    height: 500px;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    background-image: url("../image/ec_work.png");
+    
+}
+
+.cover02{
+    height: 500px;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    background-image: url("../image/portfolio_corporate.png");
+    
+}
+
+.cover03{
+    height: 500px;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    background-image: url("../image/suzuki_work.png");
+}
+
+.cover04{
+    height: 500px;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    background-image: url("../image/board_cherry.png");
+}
+
+.sentense{
+    padding: 50px 0;
+    text-align:center;
+    @include fontsize(16);
+    
+    h1{
+        font-weight:lighter;
+        @include fontsize(24);
+        padding-bottom: 30px;
+    }
+    
+    a{
+        color:$gray1;
+    }
+}

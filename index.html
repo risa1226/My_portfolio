@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+    
+<head>
+
+<meta charset="UTF-8">
+<title>Risa Suzuki</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<script>
+$(function(){
+   // #で始まるアンカーをクリックした場合に処理
+   $('a[href^=#]').click(function() {
+      // スクロールの速度
+      var speed = 500; // ミリ秒
+      // アンカーの値取得
+      var href= $(this).attr("href");
+      // 移動先を取得
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を数値で取得
+      var position = target.offset().top;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+</script>
+
+    
+</head>
+<body>
+    
+    <header>
+        <div class="menu">
+            <ul>
+                <li><a href="#About"><span>A</span>bout</a></li>
+                <li><a href="#Skills"><span>S</span>kills</a></li>
+                <li><a href="#Works"><span>W</span>orks</a></li>
+                <li><a href="https://github.com/risa1226"><img src="image/github.png" alt="github"></a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="cover">
+    </div>
+    
+    <div id="About">
+        <h1>About</h1>
+        <div class="profile">
+          <div class="image">   
+            <img src="./image/image_risa.png" alt="risa_image">
+          </div>
+          <div class="content">
+            <p>・山形県出身　1994年12月生まれ　現在23歳</p>
+            <p>・福島大学　人文社会学群行政政策学類卒業後、アパレル販売員として就職</p>
+            <p>・社会人一年目で一念発起し、webデザイナーになるためオンラインスクールのwebデザイナーコースを受講</p>
+            <p>・毎日一歩ずつ、努力を重ねて着実に成長していけることが強みです！</p>
+            <p>　contact<a href="mailto:az_5s_fmt@yahoo.co.jp"><img src="./image/mail.png" alt="mail"></a></p>
+          </div>
+        </div> 
+    </div>
+    
+    <div id="Skills">
+        <h1>Skills</h1>
+      <div class="skill">  
+        <div class="web">
+            <h2>web</h2>
+            <img src="./image/pc.png" alt="pc">
+<<<<<<< HEAD
+            <p>html/css/Sass/Photoshopの基本をオンラインスクールのwebデザイナーコースで習得しました。まだまだこれからスキルアップしていきます！</p>
+=======
+            <p>html/css/Sass/Photoshopの基本をオンラインスクールのwebデザイナーコースで習得しました。現在PhotoshopとIllustratorを中心に学習中です！</p>
+>>>>>>> commit0807
+        </div>
+        <div class="draw">
+            <h2>draw</h2>
+            <img src="./image/draw.png" alt="draw">
+            <p>ボードアートが好きです。コーヒーショップでのアルバイトで、文字や商品のイラストを描いていました。最近では実家の果樹直売所のボードを作成しました。</p>
+        </div>
+        <div class="communication">
+            <h2>communication</h2>
+            <img src="./image/communication.png" alt="communication">
+            <p>コミュニケーション力に自信があります。約5年間の接客経験があり、相手の立場で物事を考え行動することや、チームで作業をしていくことが得意です。</p>
+        </div>
+      </div>    
+    </div>
+    
+    <div id="Works">
+        <h2>Works</h2>
+        <div class="works_list">
+        <div class="works01">
+            <a href="work01.html"><img src="./image/ec_site.png" onmouseover="this.src='image/ec_site_a.png'" onmouseout="this.src='image/ec_site.png'" /alt="ec_site"></a>
+        </div>
+        <div class="works02">
+            <a href="work02.html"><img src="./image/corporate_site.png" onmouseover="this.src='image/corporate_site_a.png'" onmouseout="this.src='image/corporate_site.png'" /alt="corporate_site"></a>
+        </div>
+        <div class="works03">
+            <a href="work03.html"><img src="./image/suzuki_fruit.png" onmouseover="this.src='image/suzuki_fruit_a.png'" onmouseout="this.src='image/suzuki_fruit.png'" /alt="suzuki_fruit"></a>
+        </div>
+        <div class="works04">
+            <a href="work04.html"><img src="./image/blackboard.png" onmouseover="this.src='image/board_a.png'" onmouseout="this.src='image/blackboard.png'" /alt="blackboard.png"></a>
+        </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>(c) 2018　Risa suzuki</p>
+    </footer>
+
+</body>
+
+
+</html>
