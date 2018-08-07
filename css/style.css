@@ -39,11 +39,8 @@ header .menu {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-<<<<<<< HEAD
-  background-image: url("../image/image_top.png"); }
-=======
+  background-image: url("../image/image_top.png");
   background-image: url("../image/TOP_cover0807.png"); }
->>>>>>> commit0807
   @media (max-width: 550px) {
     .cover {
       height: 250px; } }
