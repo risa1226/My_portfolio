@@ -1,112 +1,285 @@
+@charset "UTF-8";
 html {
-  font-size: 62.5%; }
+  font-size: 80%; }
 
-body {
-  background: #ffffff;
-  color: #555050; }
+* {
+  color: black;
+  padding: 0;
+  margin: 0; }
 
-header .menu {
-  padding: 30px 0; }
-  header .menu ul {
-    text-align: right;
-    padding-right: 20px; }
-    header .menu ul li {
+.header {
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  padding: 10px 50px;
+  z-index: 9999; }
+  .header #title #menu_title {
+    width: auto;
+    margin: 0;
+    font-size: 20px;
+    font-size: 2rem; }
+    .header #title #menu_title a {
+      text-decoration: none; }
+      .header #title #menu_title a span {
+        font-size: 30px;
+        font-size: 3rem; }
+  .header #title #menu_title:hover a {
+    color: gray; }
+    .header #title #menu_title:hover a span {
+      color: gray; }
+  .header #menu ul {
+    text-align: right; }
+    .header #menu ul li {
+      vertical-align: middle;
       list-style: none;
       display: inline-block;
-      padding-right: 20px; }
-      header .menu ul li a {
+      padding-left: 20px; }
+      .header #menu ul li a {
         text-decoration: none;
-        font-size: 28px;
-        font-size: 2.8rem;
-        color: #555050; }
-        header .menu ul li a span {
-          font-size: 38px;
-          font-size: 3.8rem; }
-@media (max-width: 550px) {
-  header .menu {
-    padding: 10px 0; }
-    header .menu ul li {
-      padding-right: 10px; }
-      header .menu ul li a {
-        font-size: 18px;
-        font-size: 1.8rem; }
-        header .menu ul li a span {
-          font-size: 28px;
-          font-size: 2.8rem; } }
+        font-size: 12px;
+        font-size: 1.2rem; }
+    .header #menu ul li:hover a {
+      color: #BA867C; }
+      .header #menu ul li:hover a i {
+        color: #BA867C; }
 
-.cover {
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background-image: url("../image/image_top.png");
-  background-image: url("../image/TOP_cover0807.png"); }
-  @media (max-width: 550px) {
-    .cover {
-      height: 250px; } }
-
-#About {
-  padding: 100px 0;
-  text-align: center; }
-  #About h1 {
-    font-size: 38px;
-    font-size: 3.8rem;
-    font-weight: lighter; }
-  #About .profile {
-    padding-top: 30px;
-    display: flex;
-    justify-content: center; }
-    #About .profile .content {
-      padding-left: 20px;
-      text-align: left; }
-      #About .profile .content p {
-        font-size: 16px;
-        font-size: 1.6rem;
-        margin: 10px 0; }
-        #About .profile .content p img {
-          padding: 0 10px; }
-    @media (max-width: 550px) {
-      #About .profile {
-        display: block; }
-        #About .profile .content {
-          padding-top: 20px; } }
-
-#Skills {
-  padding: 100px 0;
-  text-align: center; }
-  #Skills h1 {
-    font-size: 38px;
-    font-size: 3.8rem;
-    font-weight: lighter; }
-  #Skills .skill {
-    display: flex;
-    justify-content: center; }
-    #Skills .skill .web, #Skills .skill .draw, #Skills .skill .communication {
-      width: 300px;
-      padding: 50px 20px 0 20px; }
-      #Skills .skill .web h2, #Skills .skill .draw h2, #Skills .skill .communication h2 {
+@media (max-width: 767px) {
+  .header {
+    padding: 10px;
+    display: block; }
+    .header #menu_title {
+      text-align: center;
+      font-size: 12px;
+      font-size: 1.2rem; }
+      .header #menu_title span {
         font-size: 22px;
-        font-size: 2.2rem;
-        font-weight: lighter; }
-      #Skills .skill .web img, #Skills .skill .draw img, #Skills .skill .communication img {
-        padding: 20px 0; }
-      #Skills .skill .web p, #Skills .skill .draw p, #Skills .skill .communication p {
-        font-size: 16px;
-        font-size: 1.6rem;
-        line-height: 1.8; }
-    @media (max-width: 550px) {
-      #Skills .skill {
-        display: block; }
-        #Skills .skill .web, #Skills .skill .draw, #Skills .skill .communication {
-          width: auto; } }
+        font-size: 2.2rem; }
+    .header #menu ul {
+      text-align: center; }
+      .header #menu ul li {
+        padding: 10px 10px 10px 0; } }
+#name_image {
+  text-align: center;
+  max-width: 90%;
+  margin: 60px auto; }
+  #name_image img {
+    max-width: 100%; }
 
-#Works {
-  padding: 100px 0 200px 0;
+@media (max-width: 767px) {
+  #name_image {
+    margin: 10px auto; } }
+#About {
   text-align: center; }
-  #Works h2 {
-    font-size: 38px;
-    font-size: 3.8rem;
-    font-weight: lighter; }
+  #About .sub_title {
+    margin-top: 80px;
+    font-size: 26px;
+    font-size: 2.6rem;
+    font-weight: lighter;
+    position: relative; }
+  #About .sub_title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    /*線の上下位置*/
+    display: inline-block;
+    width: 40px;
+    /*線の長さ*/
+    height: 2px;
+    /*線の太さ*/
+    transform: translateX(-50%);
+    /*位置調整*/
+    background-color: #BA867C;
+    /*線の色*/
+    border-radius: 2px;
+    /*線の丸み*/ }
+  #About .content {
+    max-width: 90%;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    #About .content .my_image img {
+      border-radius: 100px; }
+    #About .content .profile {
+      text-align: left;
+      margin-left: 20px;
+      padding: 40px;
+      border: dashed 2px #BA867C;
+      border-radius: 5px;
+      line-height: 30px; }
+      #About .content .profile a {
+        text-decoration: none; }
+        #About .content .profile a #mail {
+          display: block;
+          text-align: center;
+          width: 260px;
+          margin: 20px auto 0 auto;
+          border-radius: 10px;
+          background-color: #BA867C;
+          color: #ffffff;
+          font-weight: normal; }
+        #About .content .profile a #mail:hover {
+          background-color: #ffffff;
+          color: #BA867C;
+          box-shadow: 0 0 0 2px #BA867C inset; }
+
+@media (max-width: 767px) {
+  #About {
+    display: inline-block;
+    text-align: center; }
+    #About .sub_title {
+      margin-top: 20px; }
+    #About .content {
+      display: inline-block; }
+      #About .content .my_image {
+        margin-bottom: 60px; }
+      #About .content .profile {
+        margin: 0;
+        padding: 10px; }
+        #About .content .profile #mail {
+          margin: 10px 0; } }
+#Skills {
+  text-align: center;
+  background-color: #BA867C;
+  margin-top: 80px; }
+  #Skills .sub_title {
+    padding-top: 40px;
+    font-size: 30px;
+    font-size: 3rem;
+    font-weight: lighter;
+    color: #ffffff;
+    position: relative; }
+  #Skills .sub_title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    /*線の上下位置*/
+    display: inline-block;
+    width: 40px;
+    /*線の長さ*/
+    height: 2px;
+    /*線の太さ*/
+    transform: translateX(-50%);
+    /*位置調整*/
+    background-color: #ffffff;
+    /*線の色*/
+    border-radius: 2px;
+    /*線の丸み*/ }
+  #Skills .skill {
+    padding: 40px 0 80px 0;
+    display: flex;
+    justify-content: space-evenly;
+    height: 400px; }
+    #Skills .skill .web, #Skills .skill .diligence, #Skills .skill .communication {
+      background-color: #ffffff;
+      margin: 10px;
+      position: relative;
+      width: 33%;
+      border-radius: 20px; }
+      #Skills .skill .web h2, #Skills .skill .diligence h2, #Skills .skill .communication h2 {
+        font-size: 30px;
+        font-size: 3rem;
+        font-weight: lighter;
+        padding-top: 40px;
+        color: #BA867C; }
+      #Skills .skill .web i, #Skills .skill .diligence i, #Skills .skill .communication i {
+        line-height: 260px;
+        color: #BA867C; }
+      #Skills .skill .web .mask, #Skills .skill .diligence .mask, #Skills .skill .communication .mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background-color: #ffffff;
+        transition: all 0.2s ease;
+        border-radius: 20px; }
+        #Skills .skill .web .mask .container1, #Skills .skill .web .mask .container2, #Skills .skill .web .mask .container3, #Skills .skill .web .mask .container4, #Skills .skill .web .mask .container5, #Skills .skill .diligence .mask .container1, #Skills .skill .diligence .mask .container2, #Skills .skill .diligence .mask .container3, #Skills .skill .diligence .mask .container4, #Skills .skill .diligence .mask .container5, #Skills .skill .communication .mask .container1, #Skills .skill .communication .mask .container2, #Skills .skill .communication .mask .container3, #Skills .skill .communication .mask .container4, #Skills .skill .communication .mask .container5 {
+          display: flex;
+          justify-content: space-around;
+          padding: 10px 10px 0 10px; }
+          #Skills .skill .web .mask .container1 .title_icon1, #Skills .skill .web .mask .container1 .title_icon2, #Skills .skill .web .mask .container1 .title_icon3, #Skills .skill .web .mask .container1 .title_icon4, #Skills .skill .web .mask .container1 .title_icon5, #Skills .skill .web .mask .container2 .title_icon1, #Skills .skill .web .mask .container2 .title_icon2, #Skills .skill .web .mask .container2 .title_icon3, #Skills .skill .web .mask .container2 .title_icon4, #Skills .skill .web .mask .container2 .title_icon5, #Skills .skill .web .mask .container3 .title_icon1, #Skills .skill .web .mask .container3 .title_icon2, #Skills .skill .web .mask .container3 .title_icon3, #Skills .skill .web .mask .container3 .title_icon4, #Skills .skill .web .mask .container3 .title_icon5, #Skills .skill .web .mask .container4 .title_icon1, #Skills .skill .web .mask .container4 .title_icon2, #Skills .skill .web .mask .container4 .title_icon3, #Skills .skill .web .mask .container4 .title_icon4, #Skills .skill .web .mask .container4 .title_icon5, #Skills .skill .web .mask .container5 .title_icon1, #Skills .skill .web .mask .container5 .title_icon2, #Skills .skill .web .mask .container5 .title_icon3, #Skills .skill .web .mask .container5 .title_icon4, #Skills .skill .web .mask .container5 .title_icon5, #Skills .skill .diligence .mask .container1 .title_icon1, #Skills .skill .diligence .mask .container1 .title_icon2, #Skills .skill .diligence .mask .container1 .title_icon3, #Skills .skill .diligence .mask .container1 .title_icon4, #Skills .skill .diligence .mask .container1 .title_icon5, #Skills .skill .diligence .mask .container2 .title_icon1, #Skills .skill .diligence .mask .container2 .title_icon2, #Skills .skill .diligence .mask .container2 .title_icon3, #Skills .skill .diligence .mask .container2 .title_icon4, #Skills .skill .diligence .mask .container2 .title_icon5, #Skills .skill .diligence .mask .container3 .title_icon1, #Skills .skill .diligence .mask .container3 .title_icon2, #Skills .skill .diligence .mask .container3 .title_icon3, #Skills .skill .diligence .mask .container3 .title_icon4, #Skills .skill .diligence .mask .container3 .title_icon5, #Skills .skill .diligence .mask .container4 .title_icon1, #Skills .skill .diligence .mask .container4 .title_icon2, #Skills .skill .diligence .mask .container4 .title_icon3, #Skills .skill .diligence .mask .container4 .title_icon4, #Skills .skill .diligence .mask .container4 .title_icon5, #Skills .skill .diligence .mask .container5 .title_icon1, #Skills .skill .diligence .mask .container5 .title_icon2, #Skills .skill .diligence .mask .container5 .title_icon3, #Skills .skill .diligence .mask .container5 .title_icon4, #Skills .skill .diligence .mask .container5 .title_icon5, #Skills .skill .communication .mask .container1 .title_icon1, #Skills .skill .communication .mask .container1 .title_icon2, #Skills .skill .communication .mask .container1 .title_icon3, #Skills .skill .communication .mask .container1 .title_icon4, #Skills .skill .communication .mask .container1 .title_icon5, #Skills .skill .communication .mask .container2 .title_icon1, #Skills .skill .communication .mask .container2 .title_icon2, #Skills .skill .communication .mask .container2 .title_icon3, #Skills .skill .communication .mask .container2 .title_icon4, #Skills .skill .communication .mask .container2 .title_icon5, #Skills .skill .communication .mask .container3 .title_icon1, #Skills .skill .communication .mask .container3 .title_icon2, #Skills .skill .communication .mask .container3 .title_icon3, #Skills .skill .communication .mask .container3 .title_icon4, #Skills .skill .communication .mask .container3 .title_icon5, #Skills .skill .communication .mask .container4 .title_icon1, #Skills .skill .communication .mask .container4 .title_icon2, #Skills .skill .communication .mask .container4 .title_icon3, #Skills .skill .communication .mask .container4 .title_icon4, #Skills .skill .communication .mask .container4 .title_icon5, #Skills .skill .communication .mask .container5 .title_icon1, #Skills .skill .communication .mask .container5 .title_icon2, #Skills .skill .communication .mask .container5 .title_icon3, #Skills .skill .communication .mask .container5 .title_icon4, #Skills .skill .communication .mask .container5 .title_icon5 {
+            text-align: center;
+            width: 40%; }
+            #Skills .skill .web .mask .container1 .title_icon1 .title, #Skills .skill .web .mask .container1 .title_icon2 .title, #Skills .skill .web .mask .container1 .title_icon3 .title, #Skills .skill .web .mask .container1 .title_icon4 .title, #Skills .skill .web .mask .container1 .title_icon5 .title, #Skills .skill .web .mask .container2 .title_icon1 .title, #Skills .skill .web .mask .container2 .title_icon2 .title, #Skills .skill .web .mask .container2 .title_icon3 .title, #Skills .skill .web .mask .container2 .title_icon4 .title, #Skills .skill .web .mask .container2 .title_icon5 .title, #Skills .skill .web .mask .container3 .title_icon1 .title, #Skills .skill .web .mask .container3 .title_icon2 .title, #Skills .skill .web .mask .container3 .title_icon3 .title, #Skills .skill .web .mask .container3 .title_icon4 .title, #Skills .skill .web .mask .container3 .title_icon5 .title, #Skills .skill .web .mask .container4 .title_icon1 .title, #Skills .skill .web .mask .container4 .title_icon2 .title, #Skills .skill .web .mask .container4 .title_icon3 .title, #Skills .skill .web .mask .container4 .title_icon4 .title, #Skills .skill .web .mask .container4 .title_icon5 .title, #Skills .skill .web .mask .container5 .title_icon1 .title, #Skills .skill .web .mask .container5 .title_icon2 .title, #Skills .skill .web .mask .container5 .title_icon3 .title, #Skills .skill .web .mask .container5 .title_icon4 .title, #Skills .skill .web .mask .container5 .title_icon5 .title, #Skills .skill .diligence .mask .container1 .title_icon1 .title, #Skills .skill .diligence .mask .container1 .title_icon2 .title, #Skills .skill .diligence .mask .container1 .title_icon3 .title, #Skills .skill .diligence .mask .container1 .title_icon4 .title, #Skills .skill .diligence .mask .container1 .title_icon5 .title, #Skills .skill .diligence .mask .container2 .title_icon1 .title, #Skills .skill .diligence .mask .container2 .title_icon2 .title, #Skills .skill .diligence .mask .container2 .title_icon3 .title, #Skills .skill .diligence .mask .container2 .title_icon4 .title, #Skills .skill .diligence .mask .container2 .title_icon5 .title, #Skills .skill .diligence .mask .container3 .title_icon1 .title, #Skills .skill .diligence .mask .container3 .title_icon2 .title, #Skills .skill .diligence .mask .container3 .title_icon3 .title, #Skills .skill .diligence .mask .container3 .title_icon4 .title, #Skills .skill .diligence .mask .container3 .title_icon5 .title, #Skills .skill .diligence .mask .container4 .title_icon1 .title, #Skills .skill .diligence .mask .container4 .title_icon2 .title, #Skills .skill .diligence .mask .container4 .title_icon3 .title, #Skills .skill .diligence .mask .container4 .title_icon4 .title, #Skills .skill .diligence .mask .container4 .title_icon5 .title, #Skills .skill .diligence .mask .container5 .title_icon1 .title, #Skills .skill .diligence .mask .container5 .title_icon2 .title, #Skills .skill .diligence .mask .container5 .title_icon3 .title, #Skills .skill .diligence .mask .container5 .title_icon4 .title, #Skills .skill .diligence .mask .container5 .title_icon5 .title, #Skills .skill .communication .mask .container1 .title_icon1 .title, #Skills .skill .communication .mask .container1 .title_icon2 .title, #Skills .skill .communication .mask .container1 .title_icon3 .title, #Skills .skill .communication .mask .container1 .title_icon4 .title, #Skills .skill .communication .mask .container1 .title_icon5 .title, #Skills .skill .communication .mask .container2 .title_icon1 .title, #Skills .skill .communication .mask .container2 .title_icon2 .title, #Skills .skill .communication .mask .container2 .title_icon3 .title, #Skills .skill .communication .mask .container2 .title_icon4 .title, #Skills .skill .communication .mask .container2 .title_icon5 .title, #Skills .skill .communication .mask .container3 .title_icon1 .title, #Skills .skill .communication .mask .container3 .title_icon2 .title, #Skills .skill .communication .mask .container3 .title_icon3 .title, #Skills .skill .communication .mask .container3 .title_icon4 .title, #Skills .skill .communication .mask .container3 .title_icon5 .title, #Skills .skill .communication .mask .container4 .title_icon1 .title, #Skills .skill .communication .mask .container4 .title_icon2 .title, #Skills .skill .communication .mask .container4 .title_icon3 .title, #Skills .skill .communication .mask .container4 .title_icon4 .title, #Skills .skill .communication .mask .container4 .title_icon5 .title, #Skills .skill .communication .mask .container5 .title_icon1 .title, #Skills .skill .communication .mask .container5 .title_icon2 .title, #Skills .skill .communication .mask .container5 .title_icon3 .title, #Skills .skill .communication .mask .container5 .title_icon4 .title, #Skills .skill .communication .mask .container5 .title_icon5 .title {
+              font-size: 10px;
+              font-size: 1rem;
+              color: #BA867C;
+              margin-top: 10px;
+              padding: 5px;
+              border: solid 1px #BA867C;
+              border-radius: 20px; }
+            #Skills .skill .web .mask .container1 .title_icon1 ul, #Skills .skill .web .mask .container1 .title_icon2 ul, #Skills .skill .web .mask .container1 .title_icon3 ul, #Skills .skill .web .mask .container1 .title_icon4 ul, #Skills .skill .web .mask .container1 .title_icon5 ul, #Skills .skill .web .mask .container2 .title_icon1 ul, #Skills .skill .web .mask .container2 .title_icon2 ul, #Skills .skill .web .mask .container2 .title_icon3 ul, #Skills .skill .web .mask .container2 .title_icon4 ul, #Skills .skill .web .mask .container2 .title_icon5 ul, #Skills .skill .web .mask .container3 .title_icon1 ul, #Skills .skill .web .mask .container3 .title_icon2 ul, #Skills .skill .web .mask .container3 .title_icon3 ul, #Skills .skill .web .mask .container3 .title_icon4 ul, #Skills .skill .web .mask .container3 .title_icon5 ul, #Skills .skill .web .mask .container4 .title_icon1 ul, #Skills .skill .web .mask .container4 .title_icon2 ul, #Skills .skill .web .mask .container4 .title_icon3 ul, #Skills .skill .web .mask .container4 .title_icon4 ul, #Skills .skill .web .mask .container4 .title_icon5 ul, #Skills .skill .web .mask .container5 .title_icon1 ul, #Skills .skill .web .mask .container5 .title_icon2 ul, #Skills .skill .web .mask .container5 .title_icon3 ul, #Skills .skill .web .mask .container5 .title_icon4 ul, #Skills .skill .web .mask .container5 .title_icon5 ul, #Skills .skill .diligence .mask .container1 .title_icon1 ul, #Skills .skill .diligence .mask .container1 .title_icon2 ul, #Skills .skill .diligence .mask .container1 .title_icon3 ul, #Skills .skill .diligence .mask .container1 .title_icon4 ul, #Skills .skill .diligence .mask .container1 .title_icon5 ul, #Skills .skill .diligence .mask .container2 .title_icon1 ul, #Skills .skill .diligence .mask .container2 .title_icon2 ul, #Skills .skill .diligence .mask .container2 .title_icon3 ul, #Skills .skill .diligence .mask .container2 .title_icon4 ul, #Skills .skill .diligence .mask .container2 .title_icon5 ul, #Skills .skill .diligence .mask .container3 .title_icon1 ul, #Skills .skill .diligence .mask .container3 .title_icon2 ul, #Skills .skill .diligence .mask .container3 .title_icon3 ul, #Skills .skill .diligence .mask .container3 .title_icon4 ul, #Skills .skill .diligence .mask .container3 .title_icon5 ul, #Skills .skill .diligence .mask .container4 .title_icon1 ul, #Skills .skill .diligence .mask .container4 .title_icon2 ul, #Skills .skill .diligence .mask .container4 .title_icon3 ul, #Skills .skill .diligence .mask .container4 .title_icon4 ul, #Skills .skill .diligence .mask .container4 .title_icon5 ul, #Skills .skill .diligence .mask .container5 .title_icon1 ul, #Skills .skill .diligence .mask .container5 .title_icon2 ul, #Skills .skill .diligence .mask .container5 .title_icon3 ul, #Skills .skill .diligence .mask .container5 .title_icon4 ul, #Skills .skill .diligence .mask .container5 .title_icon5 ul, #Skills .skill .communication .mask .container1 .title_icon1 ul, #Skills .skill .communication .mask .container1 .title_icon2 ul, #Skills .skill .communication .mask .container1 .title_icon3 ul, #Skills .skill .communication .mask .container1 .title_icon4 ul, #Skills .skill .communication .mask .container1 .title_icon5 ul, #Skills .skill .communication .mask .container2 .title_icon1 ul, #Skills .skill .communication .mask .container2 .title_icon2 ul, #Skills .skill .communication .mask .container2 .title_icon3 ul, #Skills .skill .communication .mask .container2 .title_icon4 ul, #Skills .skill .communication .mask .container2 .title_icon5 ul, #Skills .skill .communication .mask .container3 .title_icon1 ul, #Skills .skill .communication .mask .container3 .title_icon2 ul, #Skills .skill .communication .mask .container3 .title_icon3 ul, #Skills .skill .communication .mask .container3 .title_icon4 ul, #Skills .skill .communication .mask .container3 .title_icon5 ul, #Skills .skill .communication .mask .container4 .title_icon1 ul, #Skills .skill .communication .mask .container4 .title_icon2 ul, #Skills .skill .communication .mask .container4 .title_icon3 ul, #Skills .skill .communication .mask .container4 .title_icon4 ul, #Skills .skill .communication .mask .container4 .title_icon5 ul, #Skills .skill .communication .mask .container5 .title_icon1 ul, #Skills .skill .communication .mask .container5 .title_icon2 ul, #Skills .skill .communication .mask .container5 .title_icon3 ul, #Skills .skill .communication .mask .container5 .title_icon4 ul, #Skills .skill .communication .mask .container5 .title_icon5 ul {
+              list-style: none;
+              white-space: nowrap; }
+              #Skills .skill .web .mask .container1 .title_icon1 ul li, #Skills .skill .web .mask .container1 .title_icon2 ul li, #Skills .skill .web .mask .container1 .title_icon3 ul li, #Skills .skill .web .mask .container1 .title_icon4 ul li, #Skills .skill .web .mask .container1 .title_icon5 ul li, #Skills .skill .web .mask .container2 .title_icon1 ul li, #Skills .skill .web .mask .container2 .title_icon2 ul li, #Skills .skill .web .mask .container2 .title_icon3 ul li, #Skills .skill .web .mask .container2 .title_icon4 ul li, #Skills .skill .web .mask .container2 .title_icon5 ul li, #Skills .skill .web .mask .container3 .title_icon1 ul li, #Skills .skill .web .mask .container3 .title_icon2 ul li, #Skills .skill .web .mask .container3 .title_icon3 ul li, #Skills .skill .web .mask .container3 .title_icon4 ul li, #Skills .skill .web .mask .container3 .title_icon5 ul li, #Skills .skill .web .mask .container4 .title_icon1 ul li, #Skills .skill .web .mask .container4 .title_icon2 ul li, #Skills .skill .web .mask .container4 .title_icon3 ul li, #Skills .skill .web .mask .container4 .title_icon4 ul li, #Skills .skill .web .mask .container4 .title_icon5 ul li, #Skills .skill .web .mask .container5 .title_icon1 ul li, #Skills .skill .web .mask .container5 .title_icon2 ul li, #Skills .skill .web .mask .container5 .title_icon3 ul li, #Skills .skill .web .mask .container5 .title_icon4 ul li, #Skills .skill .web .mask .container5 .title_icon5 ul li, #Skills .skill .diligence .mask .container1 .title_icon1 ul li, #Skills .skill .diligence .mask .container1 .title_icon2 ul li, #Skills .skill .diligence .mask .container1 .title_icon3 ul li, #Skills .skill .diligence .mask .container1 .title_icon4 ul li, #Skills .skill .diligence .mask .container1 .title_icon5 ul li, #Skills .skill .diligence .mask .container2 .title_icon1 ul li, #Skills .skill .diligence .mask .container2 .title_icon2 ul li, #Skills .skill .diligence .mask .container2 .title_icon3 ul li, #Skills .skill .diligence .mask .container2 .title_icon4 ul li, #Skills .skill .diligence .mask .container2 .title_icon5 ul li, #Skills .skill .diligence .mask .container3 .title_icon1 ul li, #Skills .skill .diligence .mask .container3 .title_icon2 ul li, #Skills .skill .diligence .mask .container3 .title_icon3 ul li, #Skills .skill .diligence .mask .container3 .title_icon4 ul li, #Skills .skill .diligence .mask .container3 .title_icon5 ul li, #Skills .skill .diligence .mask .container4 .title_icon1 ul li, #Skills .skill .diligence .mask .container4 .title_icon2 ul li, #Skills .skill .diligence .mask .container4 .title_icon3 ul li, #Skills .skill .diligence .mask .container4 .title_icon4 ul li, #Skills .skill .diligence .mask .container4 .title_icon5 ul li, #Skills .skill .diligence .mask .container5 .title_icon1 ul li, #Skills .skill .diligence .mask .container5 .title_icon2 ul li, #Skills .skill .diligence .mask .container5 .title_icon3 ul li, #Skills .skill .diligence .mask .container5 .title_icon4 ul li, #Skills .skill .diligence .mask .container5 .title_icon5 ul li, #Skills .skill .communication .mask .container1 .title_icon1 ul li, #Skills .skill .communication .mask .container1 .title_icon2 ul li, #Skills .skill .communication .mask .container1 .title_icon3 ul li, #Skills .skill .communication .mask .container1 .title_icon4 ul li, #Skills .skill .communication .mask .container1 .title_icon5 ul li, #Skills .skill .communication .mask .container2 .title_icon1 ul li, #Skills .skill .communication .mask .container2 .title_icon2 ul li, #Skills .skill .communication .mask .container2 .title_icon3 ul li, #Skills .skill .communication .mask .container2 .title_icon4 ul li, #Skills .skill .communication .mask .container2 .title_icon5 ul li, #Skills .skill .communication .mask .container3 .title_icon1 ul li, #Skills .skill .communication .mask .container3 .title_icon2 ul li, #Skills .skill .communication .mask .container3 .title_icon3 ul li, #Skills .skill .communication .mask .container3 .title_icon4 ul li, #Skills .skill .communication .mask .container3 .title_icon5 ul li, #Skills .skill .communication .mask .container4 .title_icon1 ul li, #Skills .skill .communication .mask .container4 .title_icon2 ul li, #Skills .skill .communication .mask .container4 .title_icon3 ul li, #Skills .skill .communication .mask .container4 .title_icon4 ul li, #Skills .skill .communication .mask .container4 .title_icon5 ul li, #Skills .skill .communication .mask .container5 .title_icon1 ul li, #Skills .skill .communication .mask .container5 .title_icon2 ul li, #Skills .skill .communication .mask .container5 .title_icon3 ul li, #Skills .skill .communication .mask .container5 .title_icon4 ul li, #Skills .skill .communication .mask .container5 .title_icon5 ul li {
+                display: inline-block; }
+                #Skills .skill .web .mask .container1 .title_icon1 ul li i, #Skills .skill .web .mask .container1 .title_icon2 ul li i, #Skills .skill .web .mask .container1 .title_icon3 ul li i, #Skills .skill .web .mask .container1 .title_icon4 ul li i, #Skills .skill .web .mask .container1 .title_icon5 ul li i, #Skills .skill .web .mask .container2 .title_icon1 ul li i, #Skills .skill .web .mask .container2 .title_icon2 ul li i, #Skills .skill .web .mask .container2 .title_icon3 ul li i, #Skills .skill .web .mask .container2 .title_icon4 ul li i, #Skills .skill .web .mask .container2 .title_icon5 ul li i, #Skills .skill .web .mask .container3 .title_icon1 ul li i, #Skills .skill .web .mask .container3 .title_icon2 ul li i, #Skills .skill .web .mask .container3 .title_icon3 ul li i, #Skills .skill .web .mask .container3 .title_icon4 ul li i, #Skills .skill .web .mask .container3 .title_icon5 ul li i, #Skills .skill .web .mask .container4 .title_icon1 ul li i, #Skills .skill .web .mask .container4 .title_icon2 ul li i, #Skills .skill .web .mask .container4 .title_icon3 ul li i, #Skills .skill .web .mask .container4 .title_icon4 ul li i, #Skills .skill .web .mask .container4 .title_icon5 ul li i, #Skills .skill .web .mask .container5 .title_icon1 ul li i, #Skills .skill .web .mask .container5 .title_icon2 ul li i, #Skills .skill .web .mask .container5 .title_icon3 ul li i, #Skills .skill .web .mask .container5 .title_icon4 ul li i, #Skills .skill .web .mask .container5 .title_icon5 ul li i, #Skills .skill .diligence .mask .container1 .title_icon1 ul li i, #Skills .skill .diligence .mask .container1 .title_icon2 ul li i, #Skills .skill .diligence .mask .container1 .title_icon3 ul li i, #Skills .skill .diligence .mask .container1 .title_icon4 ul li i, #Skills .skill .diligence .mask .container1 .title_icon5 ul li i, #Skills .skill .diligence .mask .container2 .title_icon1 ul li i, #Skills .skill .diligence .mask .container2 .title_icon2 ul li i, #Skills .skill .diligence .mask .container2 .title_icon3 ul li i, #Skills .skill .diligence .mask .container2 .title_icon4 ul li i, #Skills .skill .diligence .mask .container2 .title_icon5 ul li i, #Skills .skill .diligence .mask .container3 .title_icon1 ul li i, #Skills .skill .diligence .mask .container3 .title_icon2 ul li i, #Skills .skill .diligence .mask .container3 .title_icon3 ul li i, #Skills .skill .diligence .mask .container3 .title_icon4 ul li i, #Skills .skill .diligence .mask .container3 .title_icon5 ul li i, #Skills .skill .diligence .mask .container4 .title_icon1 ul li i, #Skills .skill .diligence .mask .container4 .title_icon2 ul li i, #Skills .skill .diligence .mask .container4 .title_icon3 ul li i, #Skills .skill .diligence .mask .container4 .title_icon4 ul li i, #Skills .skill .diligence .mask .container4 .title_icon5 ul li i, #Skills .skill .diligence .mask .container5 .title_icon1 ul li i, #Skills .skill .diligence .mask .container5 .title_icon2 ul li i, #Skills .skill .diligence .mask .container5 .title_icon3 ul li i, #Skills .skill .diligence .mask .container5 .title_icon4 ul li i, #Skills .skill .diligence .mask .container5 .title_icon5 ul li i, #Skills .skill .communication .mask .container1 .title_icon1 ul li i, #Skills .skill .communication .mask .container1 .title_icon2 ul li i, #Skills .skill .communication .mask .container1 .title_icon3 ul li i, #Skills .skill .communication .mask .container1 .title_icon4 ul li i, #Skills .skill .communication .mask .container1 .title_icon5 ul li i, #Skills .skill .communication .mask .container2 .title_icon1 ul li i, #Skills .skill .communication .mask .container2 .title_icon2 ul li i, #Skills .skill .communication .mask .container2 .title_icon3 ul li i, #Skills .skill .communication .mask .container2 .title_icon4 ul li i, #Skills .skill .communication .mask .container2 .title_icon5 ul li i, #Skills .skill .communication .mask .container3 .title_icon1 ul li i, #Skills .skill .communication .mask .container3 .title_icon2 ul li i, #Skills .skill .communication .mask .container3 .title_icon3 ul li i, #Skills .skill .communication .mask .container3 .title_icon4 ul li i, #Skills .skill .communication .mask .container3 .title_icon5 ul li i, #Skills .skill .communication .mask .container4 .title_icon1 ul li i, #Skills .skill .communication .mask .container4 .title_icon2 ul li i, #Skills .skill .communication .mask .container4 .title_icon3 ul li i, #Skills .skill .communication .mask .container4 .title_icon4 ul li i, #Skills .skill .communication .mask .container4 .title_icon5 ul li i, #Skills .skill .communication .mask .container5 .title_icon1 ul li i, #Skills .skill .communication .mask .container5 .title_icon2 ul li i, #Skills .skill .communication .mask .container5 .title_icon3 ul li i, #Skills .skill .communication .mask .container5 .title_icon4 ul li i, #Skills .skill .communication .mask .container5 .title_icon5 ul li i {
+                  line-height: 70px;
+                  letter-spacing: 1px;
+                  width: auto;
+                  height: 100%; }
+                #Skills .skill .web .mask .container1 .title_icon1 ul li img, #Skills .skill .web .mask .container1 .title_icon2 ul li img, #Skills .skill .web .mask .container1 .title_icon3 ul li img, #Skills .skill .web .mask .container1 .title_icon4 ul li img, #Skills .skill .web .mask .container1 .title_icon5 ul li img, #Skills .skill .web .mask .container2 .title_icon1 ul li img, #Skills .skill .web .mask .container2 .title_icon2 ul li img, #Skills .skill .web .mask .container2 .title_icon3 ul li img, #Skills .skill .web .mask .container2 .title_icon4 ul li img, #Skills .skill .web .mask .container2 .title_icon5 ul li img, #Skills .skill .web .mask .container3 .title_icon1 ul li img, #Skills .skill .web .mask .container3 .title_icon2 ul li img, #Skills .skill .web .mask .container3 .title_icon3 ul li img, #Skills .skill .web .mask .container3 .title_icon4 ul li img, #Skills .skill .web .mask .container3 .title_icon5 ul li img, #Skills .skill .web .mask .container4 .title_icon1 ul li img, #Skills .skill .web .mask .container4 .title_icon2 ul li img, #Skills .skill .web .mask .container4 .title_icon3 ul li img, #Skills .skill .web .mask .container4 .title_icon4 ul li img, #Skills .skill .web .mask .container4 .title_icon5 ul li img, #Skills .skill .web .mask .container5 .title_icon1 ul li img, #Skills .skill .web .mask .container5 .title_icon2 ul li img, #Skills .skill .web .mask .container5 .title_icon3 ul li img, #Skills .skill .web .mask .container5 .title_icon4 ul li img, #Skills .skill .web .mask .container5 .title_icon5 ul li img, #Skills .skill .diligence .mask .container1 .title_icon1 ul li img, #Skills .skill .diligence .mask .container1 .title_icon2 ul li img, #Skills .skill .diligence .mask .container1 .title_icon3 ul li img, #Skills .skill .diligence .mask .container1 .title_icon4 ul li img, #Skills .skill .diligence .mask .container1 .title_icon5 ul li img, #Skills .skill .diligence .mask .container2 .title_icon1 ul li img, #Skills .skill .diligence .mask .container2 .title_icon2 ul li img, #Skills .skill .diligence .mask .container2 .title_icon3 ul li img, #Skills .skill .diligence .mask .container2 .title_icon4 ul li img, #Skills .skill .diligence .mask .container2 .title_icon5 ul li img, #Skills .skill .diligence .mask .container3 .title_icon1 ul li img, #Skills .skill .diligence .mask .container3 .title_icon2 ul li img, #Skills .skill .diligence .mask .container3 .title_icon3 ul li img, #Skills .skill .diligence .mask .container3 .title_icon4 ul li img, #Skills .skill .diligence .mask .container3 .title_icon5 ul li img, #Skills .skill .diligence .mask .container4 .title_icon1 ul li img, #Skills .skill .diligence .mask .container4 .title_icon2 ul li img, #Skills .skill .diligence .mask .container4 .title_icon3 ul li img, #Skills .skill .diligence .mask .container4 .title_icon4 ul li img, #Skills .skill .diligence .mask .container4 .title_icon5 ul li img, #Skills .skill .diligence .mask .container5 .title_icon1 ul li img, #Skills .skill .diligence .mask .container5 .title_icon2 ul li img, #Skills .skill .diligence .mask .container5 .title_icon3 ul li img, #Skills .skill .diligence .mask .container5 .title_icon4 ul li img, #Skills .skill .diligence .mask .container5 .title_icon5 ul li img, #Skills .skill .communication .mask .container1 .title_icon1 ul li img, #Skills .skill .communication .mask .container1 .title_icon2 ul li img, #Skills .skill .communication .mask .container1 .title_icon3 ul li img, #Skills .skill .communication .mask .container1 .title_icon4 ul li img, #Skills .skill .communication .mask .container1 .title_icon5 ul li img, #Skills .skill .communication .mask .container2 .title_icon1 ul li img, #Skills .skill .communication .mask .container2 .title_icon2 ul li img, #Skills .skill .communication .mask .container2 .title_icon3 ul li img, #Skills .skill .communication .mask .container2 .title_icon4 ul li img, #Skills .skill .communication .mask .container2 .title_icon5 ul li img, #Skills .skill .communication .mask .container3 .title_icon1 ul li img, #Skills .skill .communication .mask .container3 .title_icon2 ul li img, #Skills .skill .communication .mask .container3 .title_icon3 ul li img, #Skills .skill .communication .mask .container3 .title_icon4 ul li img, #Skills .skill .communication .mask .container3 .title_icon5 ul li img, #Skills .skill .communication .mask .container4 .title_icon1 ul li img, #Skills .skill .communication .mask .container4 .title_icon2 ul li img, #Skills .skill .communication .mask .container4 .title_icon3 ul li img, #Skills .skill .communication .mask .container4 .title_icon4 ul li img, #Skills .skill .communication .mask .container4 .title_icon5 ul li img, #Skills .skill .communication .mask .container5 .title_icon1 ul li img, #Skills .skill .communication .mask .container5 .title_icon2 ul li img, #Skills .skill .communication .mask .container5 .title_icon3 ul li img, #Skills .skill .communication .mask .container5 .title_icon4 ul li img, #Skills .skill .communication .mask .container5 .title_icon5 ul li img {
+                  padding-top: 16px; }
+          #Skills .skill .web .mask .container1 .text, #Skills .skill .web .mask .container2 .text, #Skills .skill .web .mask .container3 .text, #Skills .skill .web .mask .container4 .text, #Skills .skill .web .mask .container5 .text, #Skills .skill .diligence .mask .container1 .text, #Skills .skill .diligence .mask .container2 .text, #Skills .skill .diligence .mask .container3 .text, #Skills .skill .diligence .mask .container4 .text, #Skills .skill .diligence .mask .container5 .text, #Skills .skill .communication .mask .container1 .text, #Skills .skill .communication .mask .container2 .text, #Skills .skill .communication .mask .container3 .text, #Skills .skill .communication .mask .container4 .text, #Skills .skill .communication .mask .container5 .text {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            width: 50%;
+            max-width: 90%; }
+        #Skills .skill .web .mask .container4, #Skills .skill .web .mask .container5, #Skills .skill .diligence .mask .container4, #Skills .skill .diligence .mask .container5, #Skills .skill .communication .mask .container4, #Skills .skill .communication .mask .container5 {
+          margin-top: 50px;
+          padding: 0 30px 0 0; }
+          #Skills .skill .web .mask .container4 .text, #Skills .skill .web .mask .container5 .text, #Skills .skill .diligence .mask .container4 .text, #Skills .skill .diligence .mask .container5 .text, #Skills .skill .communication .mask .container4 .text, #Skills .skill .communication .mask .container5 .text {
+            width: 60%; }
+      #Skills .skill .web .mask:hover, #Skills .skill .diligence .mask:hover, #Skills .skill .communication .mask:hover {
+        opacity: 1; }
+
+@media (max-width: 1069px) {
+  #Skills {
+    height: 1400px; }
+    #Skills .skill {
+      display: inline; }
+      #Skills .skill .web, #Skills .skill .diligence, #Skills .skill .communication {
+        width: 80%;
+        margin: 10px auto; }
+      #Skills .skill .web {
+        margin-top: 100px; }
+      #Skills .skill .communication {
+        margin-bottom: 100px; } }
+#Works {
+  padding: 60px 0 200px 0;
+  text-align: center; }
+  #Works .sub_title {
+    margin-top: 80px;
+    font-size: 26px;
+    font-size: 2.6rem;
+    font-weight: lighter;
+    position: relative; }
+  #Works .sub_title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    /*線の上下位置*/
+    display: inline-block;
+    width: 40px;
+    /*線の長さ*/
+    height: 2px;
+    /*線の太さ*/
+    transform: translateX(-50%);
+    /*位置調整*/
+    background-color: #BA867C;
+    /*線の色*/
+    border-radius: 2px;
+    /*線の丸み*/ }
   #Works .works_list {
     display: flex;
     flex-wrap: wrap;
@@ -116,51 +289,93 @@ header .menu {
       padding: 10px 20px 30px 20px; }
 
 footer {
-  background-color: #dcdcdc; }
+  background-color: #BA867C; }
   footer p {
     font-size: 14px;
     font-size: 1.4rem;
-    text-align: center; }
+    text-align: center;
+    color: #ffffff;
+    font-weight: light; }
 
-.cover01 {
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background-image: url("../image/ec_work.png"); }
-
-.cover02 {
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background-image: url("../image/portfolio_corporate.png"); }
-
-.cover03 {
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background-image: url("../image/suzuki_work.png"); }
-
-.cover04 {
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background-image: url("../image/board_cherry.png"); }
-
-.sentense {
-  padding: 50px 0;
+.work_text {
   text-align: center;
-  font-size: 16px;
-  font-size: 1.6rem; }
-  .sentense h1 {
-    font-weight: lighter;
-    font-size: 24px;
-    font-size: 2.4rem;
-    padding-bottom: 30px; }
-  .sentense a {
-    color: #555050; }
+  margin-top: 100px;
+  font-size: 14px;
+  font-size: 1.4rem; }
+  .work_text .work_title {
+    color: #BA867C;
+    font-size: 22px;
+    font-size: 2.2rem; }
+  .work_text .description {
+    border-top: dashed 1px #BA867C;
+    border-bottom: dashed 1px #BA867C;
+    display: inline-block;
+    text-align: left;
+    padding: 20px 0;
+    margin: 100px 0 50px 0; }
+    .work_text .description .language span, .work_text .description .time span, .work_text .description .page span, .work_text .description .github span, .work_text .description .link span, .work_text .description .tool span {
+      color: #BA867C;
+      padding-right: 40px;
+      font-size: 18px;
+      font-size: 1.8rem; }
+    .work_text .description .page span {
+      padding-right: 20px; }
+    .work_text .description .github span, .work_text .description .link span {
+      padding-right: 55px; }
+    .work_text .description .github a, .work_text .description .link a {
+      text-decoration: none;
+      padding: 3px 5px;
+      border: solid 1px #BA867C;
+      border-radius: 10px;
+      color: #ffffff;
+      background-color: #BA867C; }
+    .work_text .description .github a:hover, .work_text .description .link a:hover {
+      background-color: #ffffff;
+      color: #BA867C; }
+    .work_text .description .link span, .work_text .description .tool span {
+      padding-right: 65px; }
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 10px auto;
+  justify-content: space-evenly; }
+  .images .image {
+    padding: 0 10px;
+    width: auto; }
+    .images .image p {
+      color: #BA867C;
+      font-size: 14px;
+      font-size: 1.4rem;
+      padding-bottom: 10px; }
+    .images .image img {
+      display: inline-block;
+      vertical-align: top;
+      padding-bottom: 60px; }
+
+@media (max-width: 767px) {
+  .work_text {
+    font-size: 10px;
+    font-size: 1rem; }
+    .work_text .work_title {
+      font-size: 14px;
+      font-size: 1.4rem; }
+    .work_text .description .language span, .work_text .description .time span, .work_text .description .page span, .work_text .description .github span {
+      padding-right: 40px;
+      font-size: 12px;
+      font-size: 1.2rem; }
+    .work_text .description .page span {
+      padding-right: 20px; }
+
+  .images {
+    display: block; }
+    .images .image {
+      text-align: center;
+      margin: 60px 0; }
+      .images .image img {
+        width: auto;
+        height: auto;
+        margin: 0 auto; } }
 
 /*# sourceMappingURL=style.css.map */
