@@ -4,12 +4,15 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Risa Suzuki</title>
+<title>Portfolio by Risa</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
     
+<link rel="icon" href="./image/favicon.ico">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
+
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 
@@ -24,7 +27,7 @@ $(function(){
       // 移動先を取得
       var target = $(href == "#" || href == "" ? 'html' : href);
       // 移動先を数値で取得
-      var position = target.offset().top;
+      var position = target.offset().top - 100;
       // スムーススクロール
       $('body,html').animate({scrollTop:position}, speed, 'swing');
       return false;
@@ -36,77 +39,159 @@ $(function(){
 </head>
 <body>
     
-    <header>
-        <div class="menu">
+    <div class="header">
+        <div id="title">
+            <p id="menu_title"><a href="/"><span>Portfolio</span> by Risa</a></p></a>
+        </div>
+        <div id="menu">
             <ul>
-                <li><a href="#About"><span>A</span>bout</a></li>
-                <li><a href="#Skills"><span>S</span>kills</a></li>
-                <li><a href="#Works"><span>W</span>orks</a></li>
-                <li><a href="https://github.com/risa1226"><img src="image/github.png" alt="github"></a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Works">Works</a></li>
+                <li><a href="https://github.com/risa1226"><i class="fab fa-github"></i></a></li>
             </ul>
         </div>
-    </header>
-    
-    <div class="cover">
+    </div>
+
+    <div id="name_image">
+        <img class="name" src="./image/name.png">
     </div>
     
     <div id="About">
-        <h1>About</h1>
-        <div class="profile">
-          <div class="image">   
-            <img src="./image/image_risa.png" alt="risa_image">
-          </div>
-          <div class="content">
-            <p>・山形県出身　1994年12月生まれ　現在23歳</p>
-            <p>・福島大学　人文社会学群行政政策学類卒業後、アパレル販売員として就職</p>
-            <p>・社会人一年目で一念発起し、webデザイナーになるためオンラインスクールのwebデザイナーコースを受講</p>
-            <p>・毎日一歩ずつ、努力を重ねて着実に成長していけることが強みです！</p>
-            <p>　contact<a href="mailto:az_5s_fmt@yahoo.co.jp"><img src="./image/mail.png" alt="mail"></a></p>
-          </div>
+        <h2 class="sub_title">About</h2>
+        <div class="content">
+            <div class="my_image">
+                <img src="./image/image_risa.png" alt="risa_image">
+            </div>
+            <div class="profile">
+                <p><span>◇</span>　山形県出身　1994年12月生まれ　現在25歳</p>
+                <p><span>◇</span>　福島大学　人文社会学群行政政策学類卒業後、アパレル企業に就職</p>
+                <p><span>◇</span>　サービスを販売する立場からサービスを作り出す立場にキャリアチェンジしたいと思い、HTMLとCSSから独学を開始。<br>オンラインスクールのwebデザイナーコースを受講。その後、Ruby(Ruby on Rails)を中心に学習。</p>
+                <p><span>◇</span>　ディズニーと食べる事と温泉とお布団が大好きです！</p>
+                <a href="mailto:az.5s.fmt@gmail.com"><p id="mail">お問い合わせはこちらへ</p></a>
+            </div>
         </div> 
     </div>
     
     <div id="Skills">
-        <h1>Skills</h1>
-      <div class="skill">  
-        <div class="web">
-            <h2>web</h2>
-            <img src="./image/pc.png" alt="pc">
-            <p>html/css/Sass/Photoshopの基本をオンラインスクールのwebデザイナーコースで習得しました。現在PhotoshopとIllustratorを中心に学習中です！</p>
-        </div>
-        <div class="draw">
-            <h2>draw</h2>
-            <img src="./image/draw.png" alt="draw">
-            <p>ボードアートが好きです。コーヒーショップでのアルバイトで、文字や商品のイラストを描いていました。最近では実家の果樹直売所のボードを作成しました。</p>
-        </div>
-        <div class="communication">
-            <h2>communication</h2>
-            <img src="./image/communication.png" alt="communication">
-            <p>コミュニケーション力に自信があります。約5年間の接客経験があり、相手の立場で物事を考え行動することや、チームで作業をしていくことが得意です。</p>
-        </div>
-      </div>    
+        <h2 class="sub_title">Skills</h2>
+        <div class="skill">  
+            <div class="web">
+                <h2>Web</h2>
+                <i class="fas fa-laptop fa-7x"></i>
+                <div class="mask">
+                    <div class="container1"> 
+                        <div class="title_icon1">
+                            <h3 class="title">フロントエンド</h3>
+                            <ul class="icon">
+                                <li><i class="fab fa-html5 fa-3x"></i></li>
+                                <li><i class="fab fa-css3-alt fa-3x"></i></li>
+                                <li><i class="fab fa-sass fa-2x"></i></li>
+                                <li><i class="fab fa-vuejs fa-3x"></i></li>
+                            </ul>
+                        </div>
+                        <div class="text">
+                            <p>オンラインスクールにてHTML5/CSS3/Sassを学習。<br>独学でVue.jsを学習し、ECサイトのお気に入り機能を実装
+                        </div>
+                    </div>
+                    <div class="container2"> 
+                        <div class="title_icon2">
+                            <h3 class="title">サーバーサイド</h3>
+                            <ul class="icon">
+                                <li><img src="./image/ruby.png" alt="ruby_image"></li>
+                                <li><img src="./image/rails.png" alt="rails_image"></li>
+                            </ul>
+                        </div>
+                        <div class="text">
+                            <p>独学でRuby/Ruby on Railsを学習し、<br>lsコマンドやwcコマンドの作成/実家の果樹園ECサイトを作成
+                        </div>
+                    </div>
+                    <div class="container3"> 
+                        <div class="title_icon3">
+                            <h3 class="title">デザイン</h3>
+                            <ul class="icon">
+                                <li><i class="fab fa-adobe fa-3x"></i></li>
+                                <li><i class="fab fa-figma fa-3x"></i></li>
+                            </ul>
+                        </div>
+                        <div class="text">
+                            <p>Photoshopでのワイヤーフレーム/デザインカンプの作成を学習。<br>独学でFigmaでのデザイン作成やトレースを練習
+                        </div>
+                    </div>
+                </div>       
+            </div>
+            <div class="diligence">
+                <h2>Diligence</h2>
+                <i class="fas fa-edit fa-7x"></i>
+                <div class="mask">
+                        <div class="container4">
+                            <div class="title_icon4">
+                                <ul class="icon">
+                                    <li><i class="fas fa-laptop-code fa-4x"></i></li>
+                                </ul>
+                            </div>
+                            <div class="text">
+                                <p>目の前の課題を一つずつ確実に解決出来るように務める事が出来ます。<br>課題解決やスキルアップの為に新しい知識を身に着けることが習慣付いており、常に改善意識を持って何事にも取り組む事が出来ます。
+                            </div>
+                        </div>
+                        <div class="container5">
+                            <div class="title_icon5">
+                                <ul class="icon">
+                                    <li><i class="fas fa-running fa-4x"></i></li>
+                                </ul>
+                            </div>
+                            <div class="text">
+                                <p>現状維持ではなく、”昨日出来なかったことは今日できるように”　を意識して学習や仕事に取り組むようにしています。
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="communication">
+                <h2>communication</h2>
+                <i class="fas fa-comments fa-7x"></i>
+                <div class="mask">
+                        <div class="container4">
+                            <div class="title_icon4">
+                                <ul class="icon">
+                                    <li><i class="fas fa-hand-holding-heart fa-4x"></i></li>
+                                </ul>
+                            </div>
+                            <div class="text">
+                                <p>大学時代から現在までの約8年間、接客業に従事していた為、相手の立場に立って物事を考える事が出来ます。
+                            </div>
+                        </div>
+                        <div class="container5">
+                            <div class="title_icon5">
+                                <ul class="icon">
+                                    <li><i class="far fa-handshake fa-4x"></i></li>
+                                </ul>
+                            </div>
+                            <div class="text">
+                                <p>チームワークを大切に働く事が出来ます。進捗状況や適性に合わせた人員配置を行う為に日頃からコミュニケーションを取ることや、自分に与えられた仕事を責任を持って取り組むことでチームに貢献することを意識出来ます。
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>    
     </div>
     
     <div id="Works">
-        <h2>Works</h2>
+        <h2　 class="sub_title">Works</h2>
         <div class="works_list">
-        <div class="works01">
-            <a href="work01.html"><img src="./image/ec_site.png" onmouseover="this.src='image/ec_site_a.png'" onmouseout="this.src='image/ec_site.png'" /alt="ec_site"></a>
-        </div>
-        <div class="works02">
-            <a href="work02.html"><img src="./image/corporate_site.png" onmouseover="this.src='image/corporate_site_a.png'" onmouseout="this.src='image/corporate_site.png'" /alt="corporate_site"></a>
-        </div>
-        <div class="works03">
-            <a href="work03.html"><img src="./image/suzuki_fruit.png" onmouseover="this.src='image/suzuki_fruit_a.png'" onmouseout="this.src='image/suzuki_fruit.png'" /alt="suzuki_fruit"></a>
-        </div>
-        <div class="works04">
-            <a href="work04.html"><img src="./image/blackboard.png" onmouseover="this.src='image/board_a.png'" onmouseout="this.src='image/blackboard.png'" /alt="blackboard.png"></a>
-        </div>
+            <div class="works01">
+                <a href="work01.html"><img src="./image/ec.png" onmouseover="this.src='image/ec_hover.png'" onmouseout="this.src='image/ec.png'" /alt="ec_site"></a>
+            </div>
+            <div class="works02">
+                <a href="work02.html"><img src="./image/corporate.png" onmouseover="this.src='image/corporate_hover.png'" onmouseout="this.src='image/corporate.png'" /alt="corporate_site"></a>
+            </div>
+            <div class="works03">
+                <a href="work03.html"><img src="./image/suzuki_ec.png" onmouseover="this.src='image/suzuki_ec_hover.png'" onmouseout="this.src='image/suzuki_ec.png'" /alt="suzuki_ec"></a>
+            </div>
         </div>
     </div>
-    
+
     <footer>
-        <p>(c) 2018　Risa suzuki</p>
+        <p>(c) 2020　Risa suzuki</p>
     </footer>
 
 </body>
