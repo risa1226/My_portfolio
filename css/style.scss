@@ -366,6 +366,11 @@ $pink: #BA867C;
             .web, .diligence, .communication{
                 width: 80%;
                 margin: 10px auto;
+
+                .mask{
+                    opacity: 1;
+                }
+                
             }
 
             .web{

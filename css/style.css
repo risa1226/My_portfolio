@@ -250,6 +250,8 @@ html {
       #Skills .skill .web, #Skills .skill .diligence, #Skills .skill .communication {
         width: 80%;
         margin: 10px auto; }
+        #Skills .skill .web .mask, #Skills .skill .diligence .mask, #Skills .skill .communication .mask {
+          opacity: 1; }
       #Skills .skill .web {
         margin-top: 100px; }
       #Skills .skill .communication {
