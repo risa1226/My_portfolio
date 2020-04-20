@@ -250,8 +250,15 @@ html {
       #Skills .skill .web, #Skills .skill .diligence, #Skills .skill .communication {
         width: 80%;
         margin: 10px auto; }
+        #Skills .skill .web i, #Skills .skill .diligence i, #Skills .skill .communication i {
+          line-height: 290px; }
         #Skills .skill .web .mask, #Skills .skill .diligence .mask, #Skills .skill .communication .mask {
           opacity: 1; }
+          #Skills .skill .web .mask .container1 .text, #Skills .skill .web .mask .container2 .text, #Skills .skill .web .mask .container3 .text, #Skills .skill .web .mask .container4 .text, #Skills .skill .web .mask .container5 .text, #Skills .skill .diligence .mask .container1 .text, #Skills .skill .diligence .mask .container2 .text, #Skills .skill .diligence .mask .container3 .text, #Skills .skill .diligence .mask .container4 .text, #Skills .skill .diligence .mask .container5 .text, #Skills .skill .communication .mask .container1 .text, #Skills .skill .communication .mask .container2 .text, #Skills .skill .communication .mask .container3 .text, #Skills .skill .communication .mask .container4 .text, #Skills .skill .communication .mask .container5 .text {
+            font-size: 8px;
+            font-size: 0.8rem; }
+          #Skills .skill .web .mask .container4, #Skills .skill .web .mask .container5, #Skills .skill .diligence .mask .container4, #Skills .skill .diligence .mask .container5, #Skills .skill .communication .mask .container4, #Skills .skill .communication .mask .container5 {
+            margin-top: 20px; }
       #Skills .skill .web {
         margin-top: 100px; }
       #Skills .skill .communication {
@@ -368,7 +375,7 @@ footer {
       font-size: 12px;
       font-size: 1.2rem; }
     .work_text .description .page span {
-      padding-right: 20px; }
+      padding-right: 30px; }
 
   .images {
     display: block; }

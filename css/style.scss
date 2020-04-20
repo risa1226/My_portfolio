@@ -367,8 +367,25 @@ $pink: #BA867C;
                 width: 80%;
                 margin: 10px auto;
 
+                i{
+                    line-height: 290px;
+                }
+
                 .mask{
                     opacity: 1;
+
+                    .container1, .container2, .container3, .container4, .container5{
+
+                        .text{
+                            @include fontsize(8);
+                        }
+                    }
+
+                    .container4, .container5{
+                        margin-top: 20px;
+                        
+                    }
+                    
                 }
                 
             }
@@ -527,7 +544,7 @@ footer{
             }
             .page{
                 span{
-                    padding-right: 20px;
+                    padding-right: 30px;
                 }
             }
         }
